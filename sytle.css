@@ -1,0 +1,22 @@
+.h1{
+	color: #12D815;
+}
+nav{
+	background-color: black;
+	text-align: center;
+
+}
+nav a{
+	color: white;
+	display: inline-block;
+	padding: 6px 20px;
+	font-size: 16px;
+	transition: 0.6s;
+}
+nav a:hover{
+	background-color: #EC8B00;
+}
+p{
+	color: #777171;
+	margin-bottom: 30px;
+}
