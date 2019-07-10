@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+	<meta charset="UTF-8">
+	<title>25</title>
+	<link rel="stylesheet" href="reset.css">
+</head>
+<style>
+	.controller{
+		display: block;
+		margin: 10px;
+		text-decoration: none;
+		background-color: #ccc;
+		width: 50px;
+		text-align: center;
+		padding: 6px 10px;
+
+
+	}
+	.text{
+		margin: 10px;
+		text-align: center;
+		font-size: 30px;
+		display: none;
+	}
+	
+</style>
+<body>
+	
+	<a href="#" class="controller">開 / 關</a>
+	<div class="text">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, rem numquam et ex fugit ipsa nesciunt totam vitae iste consequatur, commodi nobis consequuntur non veniam corporis. Eveniet aut, ratione laborum.</p>
+	</div>
+
+
+
+	<script src="js/jquery3.4.0.js"></script>
+	<script>
+		$(document).ready(function(){
+			//123
+
+			$(".controller").click(function(){
+				$(".text").fadeToggle();
+			});
+
+
+
+
+
+
+
+			//123
+		});
+	</script>
+</body>
+</html>

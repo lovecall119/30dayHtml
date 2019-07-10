@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <title>RWD選單</title>
+    <style>
+        #menu_control{
+			position: absolute;
+			z-index: 2;
+		}
+		.header{
+			height: 50px;
+			background-color: #ccc;
+			position: relative;
+		}
+		.logo{
+			height: 40px;
+			width: 60px;
+		}
+		.logo img{
+			vertical-align: middle;
+		}
+		.menu_btn{
+			width: 40px;
+			height: 40px;
+			background-color: #000;
+			display: inline-block;
+			position: absolute;
+			top: 5px;
+			right: 10px;
+		}
+		.menu_btn span{
+			opacity: 0;
+		}
+		.menu_btn::before{
+			content: '';
+			position: absolute;
+			height: 34px;
+			width: 2px;
+			top: 3px;
+			left: 0px;
+			right: 0px;
+			margin: auto;
+			background-color: #aaa;
+			box-shadow: 10px 0px 0px #aaa,
+						-10px 0px 0px #aaa
+
+		}
+		nav{
+			width: 80%;
+			height: calc(100vh - 50px);
+			background-color: #fcc;
+			position: absolute; 
+			top: 50px;
+			left: -100%;
+			transition: 1s;
+		}
+		nav a{
+			display: block;
+			text-s=text-decoration: none;
+			color: green;
+			padding: 10px 20px;
+			border-bottom: 1px solid green;
+		}
+		#menu_control:checked ~ .header nav{
+			left: 0;
+		}
+
+		@media screen and (min-width: 768px){
+			.menu_btn{ display: none; }
+			.header{
+				display: flex;
+			}
+			nav{
+				position: relative;
+				left: 0px;
+				display: flex;
+				width: auto;
+				height: auto;
+				top: 0;
+			}
+		}
+
+	</style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu_control">
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"><img src="http://fakeimg.pl/60x40/00CED1/FFF/?text=img+placeholder"></a>
+        </h1>
+        <label for="menu_control" class="menu_btn">
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </div>
+</body>
+
+</html>
